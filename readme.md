@@ -29,7 +29,14 @@ Use to [Adminer](https://www.adminer.org/)
 
 Access for browser
 
-http://localhost:1234/adminer
+http://localhost:1234/adminer.php
+
+| item | value |
+| -- | -- |
+| Server | db |
+| User | root |
+| Password | root |
+| Database | testdb |
 
 ## Start Laravel
 
