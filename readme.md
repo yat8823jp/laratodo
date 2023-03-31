@@ -42,18 +42,18 @@ http://localhost:1234/adminer.php
 
 Document root
 
-/testapp
+/todo
 
 ```
 docker-compose exec php-fpm sh
 ```
 
 ```
-/var/www/html # cd testapp/
+/var/www/html # cd todo/
 ```
 
 ```
-/var/www/html/testapp # php artisan migrate
+/var/www/html/todo # php artisan migrate
 ```
 
 Access for browser
