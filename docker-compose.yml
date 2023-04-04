@@ -3,7 +3,7 @@ services:
   web:
     image: nginx:latest
     ports:
-      - 1234:80
+      - 8000:80
     volumes:
       - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf
       - .:/var/www/html
@@ -18,10 +18,10 @@ services:
   db:
     image: mariadb:latest
     ports:
-      - 13306:3306
+      - 23306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
+      MYSQL_USER: user
       MYSQL_PASSWORD: root
       MYSQL_DATABASE: testdb
     volumes:
