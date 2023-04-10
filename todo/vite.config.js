@@ -10,19 +10,21 @@ import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     css: {
-        postcss: {
-            plugins: [
-                tailwindcss,
-                autoprefixer,
-            ],//オートプレフィックス付与
-        },
-        devSourcemap: true,//ソースマップを付与
-    },
-    plugins: [
-        sassGlobImports(),
-        laravel({
-            // input: ['resources/css/app.css', 'resources/js/app.js'],
-            input: [ 'assets/styles/app.scss', 'assets/scripts/app.js.' ],
+        plugins: [
+            sassGlobImports(),
+            laravel({
+                input: ['resources/scss/app.scss', 'resources/js/app.js'],
+                postcss: {
+                    plugins: [
+                        tailwindcss,
+                        autoprefixer,
+                    ],
+                },
+                devSourcemap: true,
+            // input: [ 'resources/js/app.js' ],
+            // input: {
+			// 	main: path.resolve( __dirname + '/main.js' )
+			// },
             refresh: true,
         }),
     ],

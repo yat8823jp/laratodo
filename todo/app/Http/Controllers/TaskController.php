@@ -17,11 +17,3 @@ class TaskController extends Controller
         ] );
     }
 }
-
-// class TaskController extends Controller
-// {
-//     public function index()
-//     {
-//         return "Hello world";
-//     }
-// }
