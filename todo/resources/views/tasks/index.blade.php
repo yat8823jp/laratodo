@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ToDo App</title>
-  <!-- @vite( 'resources/js/app.js' ) -->
   @vite( [ 'resources/scss/app.scss', 'resources/js/app.js' ] )
-  <!-- <link rel="stylesheet" href="/css/styles.css"> -->
 </head>
 <body>
 <header>
@@ -27,8 +25,8 @@
             </a>
           </div>
           <div class="list-group">
-            @foreach($folders as $folder)
-              <a href="{{ route( 'tasks.index', [ 'id' => $folder -> id ] ) }}" class="list-group-item">
+            @foreach( $folders as $folder )
+              <a href="{{ route( 'tasks.index', [ 'id' => $folder -> id ] ) }}" class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}">
                 {{ $folder -> title }}
               </a>
             @endforeach
