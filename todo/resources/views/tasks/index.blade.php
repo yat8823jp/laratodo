@@ -8,13 +8,13 @@
 				<div class="panel-heading">フォルダ</div>
 				<div class="panel-body">
 					<a href="{{ route('folders.create') }}" class="btn btn-default btn-block">
-					フォルダを追加する
+						フォルダを追加する
 					</a>
 				</div>
 				<div class="list-group">
 					@foreach($folders as $folder)
 					<a
-						href="{{ route('tasks.index', ['id' => $folder->id]) }}"
+						href="{{ route('tasks.index', ['folder' => $folder->id]) }}"
 						class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}"
 					>
 						{{ $folder->title }}
@@ -28,7 +28,7 @@
 					<div class="panel-heading">タスク</div>
 					<div class="panel-body">
 						<div class="text-right">
-						<a href="{{ route( 'tasks.create', [ 'id' => $current_folder_id ] ) }}" class="btn btn-default btn-block">
+						<a href="{{ route( 'tasks.create', [ 'folder' => $current_folder_id ] ) }}" class="btn btn-default btn-block">
 							タスクを追加する
 						</a>
 						</div>
