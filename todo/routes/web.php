@@ -23,13 +23,7 @@ use App\Http\Controllers\FolderController;
 // });
 
 Route::group( [ 'middleware' => 'auth' ], function() {
-	// Route::get(  '/', [ HomeController::class, 'index' ] ) -> name( 'home' );
-	Route::get( '/', function () {
-		// ログを出力する
-		\Log::info( "Laravel Log TEST!" );
-
-		return view( 'welcome' );
-	} );
+	Route::get(  '/', [ HomeController::class, 'index' ] ) -> name( 'home' );
 	Route::get(  '/folders/create', [ FolderController::class, 'showCreateForm'] ) -> name( 'folders.create' );
 	Route::post( '/folders/create', [ FolderController::class, 'create'] );
 	Route::group( [ 'middleware' => 'can:view,folder' ], function() {
