@@ -4,9 +4,9 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
-  "resources/scss/app.scss": {
+  "resources/sass/app.scss": {
     "file": "assets/css/main.css",
     "isEntry": true,
-    "src": "resources/scss/app.scss"
+    "src": "resources/scss/bootstrap.scss"
   }
 }

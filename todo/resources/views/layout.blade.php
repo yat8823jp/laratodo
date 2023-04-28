@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>ToDo App</title>
 	@yield( 'styles' )
-	@vite( [ 'resources/scss/app.scss', 'resources/js/app.js' ] )
+	@vite( [ 'resources/sass/app.scss', 'resources/js/app.js' ] )
 </head>
 <body>
 	<header>
